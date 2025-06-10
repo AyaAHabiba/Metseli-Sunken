@@ -1,0 +1,1230 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+	<link rel="stylesheet"
+		  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+	<!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+	<link rel="stylesheet" href="./css/style.css" />
+	<title> Metseli Sunken Museum </title>
+</head>
+
+<body>
+	<!--Header section-->
+	<header>
+		<a href="/" class="logo" data-i18n="metseli_sunken">Metseli Sunken</a>
+		<ul class="nav">
+			<li>
+				<a class="nav-btn" href="#" data-target="home"><ion-icon name="home-outline"></ion-icon></a>
+			</li>
+			<!--<li><a class="nav-btn" href="#" data-target="exhibition" data-i18n= "exhibition">exhibitions</a></li>-->
+			<li><a class="nav-btn" href="#" data-target="collection" data-i18n="collection">about us</a></li><!-- data-i18n="collection"-->
+			<li><a class="nav-btn" href="#" data-target="events" data-i18n="events">events</a></li>
+			<li><a class="nav-btn" href="#" data-target="package" data-i18n="package">package</a></li>
+			<li><a class="nav-btn" href="#" data-target="shop" data-i18n="shop">shop</a></li>
+
+		</ul>
+		<a href="#" class="bag" data-bs-toggle="modal" data-bs-target="#bagModal">
+			<ion-icon name="bag-outline"></ion-icon>
+			<span class="number">0</span>
+		</a>
+		<a href="#" class="menu" onclick="toggleMenu();">
+			<ion-icon name="grid-outline"></ion-icon>
+		</a>
+	</header>
+	<!--Navigation Mobile-->
+	<ul class="nav-mobile">
+		<li>
+			<a class="nav-btn active" href="/" data-target="home">
+				<ion-icon name="home-outline"></ion-icon>
+			</a>
+		</li>
+		<li>
+			<a class="nav-btn" href="#" data-target="collection" > about us
+			</a>
+		</li>
+		<li>
+			<a class="nav-btn" href="#" data-target="events">events</a>
+		</li>
+		<li>
+			<a class="nav-btn" href="#" data-target="package">packages</a>
+		</li>
+		<li>
+			<a class="nav-btn" href="#" data-target="shop">shop</a>
+		</li>
+	</ul>
+	<!--Hero Banner Section-->
+	<div id="home" class="banner container-fluid" style="display: block;" dir="auto">
+		<!-- Your existing banner content -->
+		<div class="banner container-fluid">
+			<div class="row d-flex align-items-center">
+				<div class="col-lg-5 col-md-12">
+					<!--apply bootstrap carousel-->
+					<div id="carouselIndicators" class="carousel slide">
+
+						<div class="carousel-inner">
+							<!--carousel item index 0 -->
+							<div class="carousel-item active">
+								<div class="content">
+									<h1 data-i18n="Marcus"> Marcus </h1><!--data-i18n="museum_title"-->
+									<h4 data-i18n="Aurelius">Aurelius</h4>
+									<p data-i18n="para1">
+										A bronze statue showing Emperor Marcus Aurelius riding a horse, 
+										one of the few statues that survived destruction.
+									</p>
+									<a data-bs-toggle="modal" data-bs-target="#itemModal"
+									   class="content-btn" href="#" data-i18n= "book_place">Book Your Seat</a><!--data-i18n= "book_place"-->
+								</div>
+
+							</div>
+
+							<!--carousel item index 1 -->
+
+							<div class="carousel-item">
+								<div class="content">
+									<h1 data-i18n= "Augustus">Augustus</h1>
+									<h4 data-i18n= "Caesar">Caesar</h4>
+									<p data-i18n="para2">
+										A bronze statue depicting Emperor Augustus in a military leader's stance,
+										adorned with a decorated armor.
+									</p>
+									<a class="content-btn" href="#"data-i18n= "book_place">Book Your Seat</a>
+								</div>
+							</div>
+
+							<!--carousel item index 2 -->
+
+							<div class="carousel-item">
+								<div class="content">
+									<h1 data-i18n="Christ" >Christ</h1>
+									<h4 data-i18n="VirginMary"> & the Virgin Mary</h4>
+									<p data-i18n="para3">
+										Wooden or stone statues depicting Christ and the Virgin Mary,
+										characterized by their simplicity and spirituality.
+									</p>
+									<a class="content-btn" href="#" data-i18n= "book_place">Book Your Seat</a>
+								</div>
+							</div>
+
+							<!--carousel item index 3 -->
+
+							<div class="carousel-item">
+								<div class="content">
+									<h1 data-i18n="Angel">Angel's</h1>
+									<h4 data-i18n="Icon">Icon</h4>
+									<p data-i18n="para4">
+										Wooden icons carved to depict angels with prominent wings and calm expressions,
+										used in religious decoration.
+									</p>
+									<a class="content-btn" href="#" data-i18n= "book_place">Book Your Seat</a>
+								</div>
+							</div>
+
+							<!--carousel item index 4 -->
+
+							<div class="carousel-item">
+								<div class="content">
+									<h1 data-i18n="Sphinx" >Sphinx</h1>
+									<h4 data-i18n="Statue">Statue</h4>
+									<p data-i18n="para5">
+										A massive statue combining the body of a lion and the head of a Pharaoh, 
+										believed to represent King Khafre, symbolizing strength and wisdom.
+									</p>
+									<a class="content-btn" href="#" data-i18n= "book_place">Book Your Seat</a>
+								</div>
+							</div>
+
+							<!--carousel item index 5 -->
+
+							<div class="carousel-item">
+								<div class="content">
+									<h1 data-i18n="Seated">Seated Scribe</h1>
+									<h4 data-i18n="Statue">Statue</h4>
+									<p data-i18n="para6">
+										A statue portraying a scribe seated with a scroll of papyrus on his lap, 
+										symbolizing the importance of writing and knowledge in ancient Egypt.
+									</p>
+									<a class="content-btn" href="#" data-i18n= "book_place">Book Your Seat</a>
+								</div>
+							</div>
+
+							<!--carousel item index 6 -->
+
+							<div class="carousel-item">
+								<div class="content">
+									<h1 data-i18n="Venus">Venus de Milo</h1>
+									<h4 data-i18n="Statue">Statue</h4>
+									<p data-i18n="para7">
+										A marble statue representing the goddess Aphrodite (Venus), 
+										the goddess of love and beauty, famous for her missing arms.
+									</p>
+									<a class="content-btn" href="#" data-i18n= "book_place">Book Your Seat</a>
+								</div>
+							</div>
+
+							<!--carousel item index 7 -->
+
+							<div class="carousel-item">
+								<div class="content">
+									<h1 data-i18n="Winged">Winged Victory </h1>
+									<h4 data-i18n="Samothrace"> Samothrace</h4>
+									<p data-i18n="para8">
+										A marble statue depicting Nike, 
+										the goddess of victory, standing at the prow of a ship, emphasizing movement and triumph.
+									</p>
+									<a class="content-btn" href="#" data-i18n= "book_place">Book Your Seat</a>
+								</div>
+							</div>
+
+
+						</div>
+					</div>
+
+				</div>
+				<div class="col-lg-7 col-md-12">
+					<div id="drag-container">
+						<div id="spin-container">
+							<img data-bs-target="#carouselIndicators"
+								 data-bs-slide-to="0"
+								 src="images/Marcus_Aurelius.png"
+								 alt="" />
+							<img data-bs-target="#carouselIndicators"
+								 data-bs-slide-to="1"
+								 src="images/Augustus_Caesar.png"
+								 alt="" />
+							<img data-bs-target="#carouselIndicators"
+								 data-bs-slide-to="2"
+								 src="images/Christ and the Virgin Mary.png"
+								 alt="" />
+							<img data-bs-target="#carouselIndicators"
+								 data-bs-slide-to="3"
+								 src="images/Angels.png"
+								 alt="" />
+							<img data-bs-target="#carouselIndicators"
+								 data-bs-slide-to="4"
+								 src="images/sphinx.png"
+								 alt="" />
+							<img data-bs-target="#carouselIndicators"
+								 data-bs-slide-to="5"
+								 src="images/Seated Scribe.png"
+								 alt="" />
+							<img data-bs-target="#carouselIndicators"
+								 data-bs-slide-to="6"
+								 src="images/Venus de Milo.png"
+								 alt="" />
+							<img data-bs-target="#carouselIndicators"
+								 data-bs-slide-to="7"
+								 src="images/Winged Victory of Samothrace.png"
+								 alt="" />
+
+							<h1 data-i18n="egy_mon">Egyptian Momemunts</h1>
+						</div>
+						<div id="ground"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--Main Section Start-->
+	<main>
+
+		<!--Aboutus Section-->
+		<section id="collection" class="collection" style="overflow-y:scroll;" dir="auto">
+			<div class="collection-title">
+				<h1>Abo<br />ut<br /> us</h1>
+			</div>
+			<div class="section-content container-fluid">
+				<div class="row">
+					<div class="col-lg-8 d-flex align-items-center justify-content-end">
+						<!-- Slider main container -->
+						<div class="swiper artsSwiper">
+							<!-- Additional required wrapper -->
+							<div class="swiper-wrapper">
+								<!-- Slides -->
+								<!-- Slide1 -->
+								<div class="swiper-slide d-flex align-items-center justify-content-end">
+									<div class="arts-item">
+										<div class="img-box">
+											<img src="./images/moh_logo.jpg" alt="" class="arts-img img-fluid" />
+
+										</div>
+										<h3 class="me-3" data-i18n="metseli_sunken">
+											Metseli Sunken Museum
+
+
+										</h3><!--data-i18n="arts_name"-->
+									</div>
+								</div>
+								<!------------>
+								<!-- Slide7 -->
+								<div class="swiper-slide d-flex align-items-center justify-content-end">
+									<div class="arts-item">
+										<div class="img-box">
+											<img src="./images/logo.jpeg" alt="" class="arts-img img-fluid" />
+
+										</div>
+										<h3 class="me-3" data-i18n="metseli_sunken">MMetseli Sunken Museum</h3>
+									</div>
+								</div>
+
+
+							</div>
+
+						</div>
+
+					</div>
+					<div class="col-lg-4">
+						<div class="arts-description d-flex flex-column">
+							<!------p1----->
+							<p class="d-inline-flex justify-content-start align-items-center gap-3" data-i18n="about_us_col">
+								<ion-icon name="arrow-back-outline"></ion-icon>
+								At Metseli Sunken Museum, we envision a world-class cultural destination where history meets the depths of the Red Sea.
+								Our mission is to revive the timeless legacy of Egypt’s ancient civilizations through a unique underwater experience that allows visitors to “Dive Through Time” —
+								exploring lifelike replicas of iconic monuments from the Pharaonic, Greek, Roman, and Modern eras.
+								We aspire to be a beacon of responsible tourism, blending heritage preservation with environmental sustainability.
+								Through immersive diving adventures, underwater viewing galleries, and above-ground cultural offerings — including Bedouin folklore, artisanal bazaars, and traditional cuisine — we aim to connect visitors with Egypt’s rich past while inspiring a sustainable future.
+							</p>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--Events Section-->
+		<section id="events" class="events" dir="auto">
+			<div class="section-content container-fluid">
+				<!---------------->
+
+				<!--------------->
+					<div class="row">
+					<div class="col-lg-6 d-flex flex-column align-items-end justify-content-center">
+						<h1 data-i18n="View">View the Monuments Through the Observation Windows</h1>
+						
+						<h4 data-i18n="event_time">Events Time </h4>
+						<h4 data-i18n="allthetime">All the time </h4>
+
+						<p class="text-end" data-i18n="eve_par10">
+							
+Not a diver? No worries!
+Thanks to our panoramic underwater observation windows, you can still immerse yourself in the magic of ancient Egypt. Witness breathtaking Pharaonic statues, Greek architecture, and iconic underwater ruins surrounded by vibrant coral reefs and exotic marine life.
+It’s a visual experience that brings history and nature together—no diving suit required!
+						</p>
+						<a href="#" class="content-btn add-to-cart"
+   data-image="images/event4.jpeg"
+   data-id="event11" data-name="Event Booking" 
+   data-price-student="150"
+   data-price-citizen="250"
+   data-price-foreign="500" data-i18n="book_now">Book Now</a>
+					</div>
+					<div class="col-lg-6">
+						<img src="./images/event4.jpeg" alt="" class="img-fluid" />
+					</div>
+				</div>
+				<!------------------------->
+				
+								<div class="row">
+					<div class="col-lg-6">
+						<img src="./images/event1.jpg" alt="" class="img-fluid" />
+					</div>
+					<div class="col-lg-6 d-flex flex-column align-items-end justify-content-center">
+						<h1 data-i18n="title_eve">The Bedouin Folklore Theater</h1>
+						
+
+						<h4 data-i18n="event_time">Events Time </h4>
+						<h4>Every day 12pm , 2pm , 4pm, 6pm </h4>
+
+						<p data-i18n="para">
+							This enchanting open-air theater offers a cultural journey through the rich heritage of the Ababda and Bishari tribes. Featuring live music, traditional dances, and storytelling, it brings the spirit of the desert to life.
+							Blending Pharaonic architecture with Bedouin soul, the theater sits along the Red Sea shore, creating an unforgettable atmosphere that celebrates authenticity and artistry.
+							Each night, lanterns glow and tribal songs echo, inviting visitors to experience a timeless piece of Egypt’s living heritage in an immersive and soulful setting.
+						</p>
+						<a href="#" class="content-btn add-to-cart"
+						   data-image="images/event1.jpg"
+						   data-id="event1" data-name="Event Booking" 
+						   data-price-student="75"
+   						   data-price-citizen="150"
+  						   data-price-foreign="300" data-i18n="book_now">Book Now</a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-6 d-flex flex-column align-items-end justify-content-center">
+						<h1 data-i18n="Underwater">The Underwater Restaurant</h1>
+						
+						<h4 data-i18n="event_time">Events Time </h4>
+						<h4 data-i18n="allthetime">All the time </h4>
+
+						<p class="text-end" data-i18n="eve_par">
+							Dive into a once-in-a-lifetime dining experience at our underwater restaurant, where you’re surrounded by the breathtaking beauty of the Red Sea’s coral reefs and marine life.
+							Enjoy a rich selection of Oriental and international cuisines, complemented by authentic tribal dishes from the Ababda heritage—like the traditional “Salat” dish.
+							With every bite, you’re not only tasting flavors, but also immersing yourself in culture, nature, and elegance beneath the waves.
+						</p>
+						<!-- <a href="#" class="content-btn add-to-cart"
+						   data-image="images/event2.jpg"
+						   data-id="event2" data-name="Event Booking" 
+						   data-price-student="0"
+   						   data-price-citizen="0"
+  						   data-price-foreign="0" data-i18n="book_now">Book Now</a> -->
+					</div>
+					<div class="col-lg-6">
+						<img src="./images/event2.jpg" alt="" class="img-fluid" />
+					</div>
+				</div>
+				<!-------------------->
+				<div class="row">
+					<div class="col-lg-6">
+						<img src="./images/event3.jpg" alt="" class="img-fluid" />
+					</div>
+					<div class="col-lg-6 d-flex flex-column align-items-end justify-content-center">
+						<h1 data-i18n="Dive">Dive Around Ancient Wonders</h1>
+						
+						<h4 data-i18n="event_time">Events Time </h4>
+						<h4>All the time, 10.00 am- 5.00 pm</h4>
+
+						<p data-i18n="eve_par2">
+							Prepare for an extraordinary adventure where history meets the deep blue.
+							In this section of the museum, certified divers can explore majestic replicas of Pharaonic monuments, including towering statues, obelisks, and a life-sized Sphinx—all submerged beneath the Red Sea.
+							This isn’t just a dive—it’s a journey through time, surrounded by vibrant coral reefs and timeless Egyptian heritage, offering an awe-inspiring fusion of culture and nature.
+						</p>
+						<a href="#" class="content-btn add-to-cart"
+						   data-image="images/event3.jpg"
+						   data-id="event3" data-name="Event Booking" 
+						   data-price-student="300"
+   						   data-price-citizen="450"
+  						   data-price-foreign="800" data-i18n="book_now">Book Now</a>
+					</div>
+				</div>
+				<!-------------------->
+				<div class="row">
+					<div class="col-lg-6 d-flex flex-column align-items-end justify-content-center">
+						<h1 data-i18n="Bazaar">The Heritage Bazaar</h1>
+						
+						<h4 data-i18n="event_time">Events Time </h4>
+						<h4 data-i18n="allthetime">All the time </h4>
+
+						<p class="text-end" data-i18n="eve_par5">
+							Where History Meets Handcrafts
+							Step into our museum’s cultural bazaar and discover a diverse collection of replica statues from the Pharaonic, Greek, and Roman eras, as well as traditional clothing and crafts from the Ababda and Bishari tribes.
+							From intricately carved artifacts to handwoven Bedouin garments, every item reflects a deep connection to Egypt’s rich and layered heritage.
+							It’s more than just a market—it’s a living gallery of craftsmanship, offering authentic souvenirs and a direct way to support local communities.
+						</p>
+						<!-- <a href="#" class="content-btn add-to-cart"
+						   data-image="images/event5.jpeg"
+						   data-id="event5" data-name="Event Booking" 
+						   data-price-student="0"
+   						   data-price-citizen="0"
+  						   data-price-foreign="0" data-i18n="book_now">Book Now</a> -->
+					</div>
+					<div class="col-lg-6">
+						<img src="./images/event5.jpeg" alt="" class="img-fluid" />
+					</div>
+				</div>
+				<!-------------->
+				<div class="row">
+					<div class="col-lg-6">
+						<img src="./images/about_us.jpg" alt="" class="img-fluid" />
+					</div>
+					<div class="col-lg-6 d-flex flex-column align-items-end justify-content-center">
+						<h1 data-i18n="Time">Time capsule</h1>
+						
+						<h4 data-i18n="event_time">Events Time </h4>
+						<h4 data-i18n="allthetime">All the time </h4>
+
+						<p data-i18n="eve_par4">
+							your message in the time capsule and you will be invited after 5 years to open it and see the message you left
+						</p>
+						<!-- <a href="#" class="content-btn add-to-cart"
+						   data-image="images/about_us.jpg"
+						   data-id="about_us" data-name="Event Booking" 
+						   data-price-student="0"
+   						   data-price-citizen="0"
+  						   data-price-foreign="0" data-i18n="book_now">Book Now</a> -->
+					</div>
+				</div>
+				<!---------------------->
+				
+
+			</div>
+
+		</section>
+
+		<!---Packages----->
+		
+		<section id="package" class="package" dir="auto">
+			<div class="section-content container-fluid">
+				<div class="row">
+					<div class="col-lg-6 d-flex flex-column align-items-end justify-content-center">
+						<h1 data-i18n="View">View the Monuments Through the Observation Windows</h1>
+						
+						<h4 data-i18n="event_time">Events Time </h4>
+						<h4 data-i18n="allthetime">All the time </h4>
+
+						<p class="text-end" data-i18n="eve_par3">
+							Enjoy an exclusive offer where you can watch a folklore show at the 
+							folklore theatre and enter the museum at an exclusive price.
+						</p>
+						<a href="#" class="content-btn package-book-btn"
+   data-image="images/package.jpeg"
+   data-id="event4" data-name="Package Booking" 
+   data-price-student="175"
+   data-price-citizen="300"
+   data-price-foreign="600" data-i18n="book_now">Book Now</a>
+					</div>
+					<div class="col-lg-6">
+						<img src="./images/package.jpeg" alt="" class="img-fluid" />
+					</div>
+				</div>
+			</div>
+				
+		</section>
+
+		<!-- Package Type Selection Modal -->
+	<!-- ...existing code... -->
+<div class="modal fade" id="packageTypeModal" tabindex="-1" aria-labelledby="packageTypeModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content" style="background: transparent !important;">
+      <div class="modal-header">
+        <h5 class="modal-title" id="packageTypeModalLabel" style="color: antiquewhite;">Select Ticket Type</h5>
+        <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+      </div>
+      <div class="modal-body">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="packageType" id="packageTypeStudent" value="student" checked>
+          <label class="form-check-label" for="packageTypeStudent" style="color: antiquewhite;">Student (<span id="package-price-student"></span>EGP)</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="packageType" id="packageTypeCitizen" value="citizen">
+          <label class="form-check-label" for="packageTypeCitizen" style="color: antiquewhite;">Citizen (<span id="package-price-citizen"></span>EGP)</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="packageType" id="packageTypeForeign" value="foreign">
+          <label class="form-check-label" for="packageTypeForeign" style="color: antiquewhite;">Foreign (<span id="package-price-foreign"></span>EGP)</label>
+        </div>
+        <div class="mt-3">
+          <strong style="color: antiquewhite;">Selected Price: £<span id="selectedPackagePrice"></span></strong>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-success" id="confirmPackageType">Add to Bag</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+		<!-- The Events' modal type -->
+		<!-- Event Type Selection Modal -->
+<div class="modal fade" id="eventTypeModal" tabindex="-1" aria-labelledby="eventTypeModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content" style="background: transparent !important;">
+      <div class="modal-header">
+        <h5 class="modal-title" id="eventTypeModalLabel" style="color: antiquewhite;">Select Ticket Type</h5>
+        <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+      </div>
+      <div class="modal-body">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="eventType" id="eventTypeStudent" value="student" checked>
+          <label class="form-check-label" for="eventTypeStudent" style="color: antiquewhite;">Student (<span id="price-student"></span>EGP)</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="eventType" id="eventTypeCitizen" value="citizen">
+          <label class="form-check-label" for="eventTypeCitizen" style="color: antiquewhite;">Citizen (<span id="price-citizen"></span>EGP)</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="eventType" id="eventTypeForeign" value="foreign">
+          <label class="form-check-label" for="eventTypeForeign" style="color: antiquewhite;">Foreign (<span id="price-foreign"></span>EGP)</label>
+        </div>
+        <div class="mt-3">
+          <strong style="color: antiquewhite;">Selected Price: $<span id="selectedEventPrice"></span></strong>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-success" id="confirmEventType">Add to Bag</button>
+      </div>
+    </div>
+  </div>
+</div>
+		<!--Shop Section-->
+		<section id="shop" class="shop" dir="auto">
+			<div class="section-content container">
+				<div class="row">
+					<div class="col-lg-12 d-flex justify-content-center">
+						<ul id="portfolio-filters">
+							<li data-filter="*" class="filter-active" data-i18n="shop_all">All</li>
+							<li data-filter=".filter-gifts" data-i18n="shop_gifts">Gifts</li>
+							<li data-filter=".filter-collectibles" data-i18n="shop_collectibles">Collectibles</li>
+							<li data-filter=".filter-books" data-i18n="shop_books">Books</li>
+							<li data-filter=".filter-exp" data-i18n="exp_corner">Experience corner</li>
+
+
+						</ul>
+					</div>
+				</div>
+				<div class="row portfolio-container">
+					<div class="col-lg-4 col-md-6 portfolio-item filter-gifts">
+						<div class="portfolio-wrap">
+							<img src="./images/gift1.jpeg" class="img-fluid" alt="" />
+							<div class="portfolio-info">
+								<h4 data-i18n="gift">Gift One</h4>
+								<p>$24</p>
+								<div class="portfolio-links">
+									<a href="images/gift1.jpeg" class="add-to-cart"
+									   data-image="images/gift1.jpeg" data-id="gift1" 
+									   data-name="Gift Item" data-price="24.00">
+										<ion-icon name="bag-add-outline"></ion-icon>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!---Map the remaining portofolo-->
+
+					<div class="col-lg-4 col-md-6 portfolio-item filter-books">
+						<div class="portfolio-wrap">
+							<img src="./images/book1.jpeg" class="img-fluid" alt="" />
+							<div class="portfolio-info">
+								<h4 data-i18n="book">Book One</h4>
+								<p>$10</p>
+								<div class="portfolio-links">
+									<a href="images/book1.jpeg" class="add-to-cart"
+									   data-image="images/book1.jpeg" data-id="book1" data-name="Book Item" data-price="10.00">
+										<ion-icon name="bag-add-outline"></ion-icon>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--------------------->
+					<div class="col-lg-4 col-md-6 portfolio-item filter-collectibles">
+						<div class="portfolio-wrap">
+							<img src="./images/col1.jpeg" class="img-fluid" alt="" />
+							<div class="portfolio-info">
+								<h4 data-i18n="collectible">Collectible One</h4>
+								<p>$25</p>
+								<div class="portfolio-links">
+									<a href="images/col1.jpeg" class="add-to-cart"
+									   data-image="images/col1.jpeg" data-id="col1" data-name="Collectible Item" data-price="25.00">
+										<ion-icon name="bag-add-outline"></ion-icon>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--------------------------->
+					<div class="col-lg-4 col-md-6 portfolio-item filter-gifts">
+						<div class="portfolio-wrap">
+							<img src="./images/gift2.jpeg" class="img-fluid" alt="" />
+							<div class="portfolio-info">
+								<h4 data-i18n="gift">Gift One</h4>
+								<p>$25.66</p>
+								<div class="portfolio-links">
+									<a href="images/gift2.jpeg" class="add-to-cart"
+									   data-image="images/gift2.jpeg" data-id="gift2" data-name="Gift Item" data-price="25.66">
+										<ion-icon name="bag-add-outline"></ion-icon>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--------------------->
+					<div class="col-lg-4 col-md-6 portfolio-item filter-gifts">
+						<div class="portfolio-wrap">
+							<img src="./images/gift3.jpeg" class="img-fluid" alt="" />
+							<div class="portfolio-info">
+								<h4 data-i18n="gift">Gift One</h4>
+								<p>$20</p>
+								<div class="portfolio-links">
+									<a href="images/gift3.jpeg" class="add-to-cart"
+									   data-image="images/gift3.jpeg" data-id="gift3" data-name="Gift Item" data-price="20.00">
+										<ion-icon name="bag-add-outline"></ion-icon>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!----------------------------->
+					<div class="col-lg-4 col-md-6 portfolio-item filter-gifts">
+						<div class="portfolio-wrap">
+							<img src="./images/gift4.jpeg" class="img-fluid" alt="" />
+							<div class="portfolio-info">
+								<h4 data-i18n="gift">Gift One</h4>
+								<p>$30</p>
+								<div class="portfolio-links">
+									<a href="images/gift4.jpeg" class="add-to-cart"
+									   data-image="images/gift4.jpeg" data-id="gift4" data-name="Gift Item" data-price="30.00">
+										<ion-icon name="bag-add-outline"></ion-icon>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--------------------------------->
+					<div class="col-lg-4 col-md-6 portfolio-item filter-gifts">
+						<div class="portfolio-wrap">
+							<img src="./images/gift5.jpeg" class="img-fluid" alt="" />
+							<div class="portfolio-info">
+								<h4 data-i18n="gift">Gift One</h4>
+								<p>$15</p>
+								<div class="portfolio-links">
+									<a href="images/gift5.jpeg" class="add-to-cart"
+									   data-image="images/gift5.jpeg" data-id="gift5" data-name="Gift Item" data-price="15.00">
+										<ion-icon name="bag-add-outline"></ion-icon>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!------------------------>
+					<div class="col-lg-4 col-md-6 portfolio-item filter-collectibles">
+						<div class="portfolio-wrap">
+							<img src="./images/col2.jpeg" class="img-fluid" alt="" />
+							<div class="portfolio-info">
+								<h4 data-i18n="collectible">Collectible One</h4>
+								<p>$30</p>
+								<div class="portfolio-links">
+									<a href="images/col2.jpeg" class="add-to-cart"
+									   data-image="images/col2.jpeg" data-id="col2" data-name="Collectible Item" data-price="30.00">
+										<ion-icon name="bag-add-outline"></ion-icon>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!----------------------------->
+					<div class="col-lg-4 col-md-6 portfolio-item filter-books">
+						<div class="portfolio-wrap">
+							<img src="./images/book2.jpeg" class="img-fluid" alt="" />
+							<div class="portfolio-info">
+								<h4 data-i18n="book">Book One</h4>
+								<p>$12</p>
+								<div class="portfolio-links">
+									<a href="images/book2.jpeg" class="add-to-cart"
+									   data-image="images/book2.jpeg" data-id="book2" data-name="Book Item" data-price="12.00">
+										<ion-icon name="bag-add-outline"></ion-icon>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!--------------------------->
+					<div class="col-lg-4 col-md-6 portfolio-item filter-gifts">
+						<div class="portfolio-wrap">
+							<img src="./images/gift7.jpeg" class="img-fluid" alt="" />
+							<div class="portfolio-info">
+								<h4 data-i18n="gift">Gift One</h4>
+								<p>$20</p>
+								<div class="portfolio-links">
+									<a href="images/gift7.jpeg" class="add-to-cart"
+									   data-image="images/gift7.jpeg" data-id="gift7" data-name="Gift Item" data-price="20.00">
+										<ion-icon name="bag-add-outline"></ion-icon>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!--------------------------->
+					<div class="col-lg-4 col-md-6 portfolio-item filter-gifts">
+						<div class="portfolio-wrap">
+							<img src="./images/gift8.jpeg" class="img-fluid" alt="" />
+							<div class="portfolio-info">
+								<h4 data-i18n="gift">Gift One</h4>
+								<p>$18</p>
+								<div class="portfolio-links">
+									<a href="images/gift8.jpeg" class="add-to-cart"
+									   data-image="images/gift8.jpeg" data-id="gift8" data-name="Gift Item" data-price="18.00">
+										<ion-icon name="bag-add-outline"></ion-icon>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!--------------------------->
+					<div class="col-lg-4 col-md-6 portfolio-item filter-gifts">
+						<div class="portfolio-wrap">
+							<img src="./images/gift9.jpeg" class="img-fluid" alt="" />
+							<div class="portfolio-info">
+								<h4 data-i18n="gift">Gift One</h4>
+								<p>$16</p>
+								<div class="portfolio-links">
+									<a href="images/gift9.jpeg" class="add-to-cart"
+									   data-image="images/gift9.jpeg" data-id="gift9" data-name="Gift Item"
+									   data-price="16.00">
+										<ion-icon name="bag-add-outline"></ion-icon>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!--------------------------->
+					<div class="col-lg-4 col-md-6 portfolio-item filter-gifts">
+						<div class="portfolio-wrap">
+							<img src="./images/gift10.jpeg" class="img-fluid" alt="" />
+							<div class="portfolio-info">
+								<h4 data-i18n="gift">Gift One</h4>
+								<p>$40</p>
+								<div class="portfolio-links">
+									<a href="images/gift10.jpeg" class="add-to-cart"
+									   data-image="images/gift10.jpeg" data-id="gift10" data-name="Gift Item" data-price="40.00">
+										<ion-icon name="bag-add-outline"></ion-icon>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!--------------------------->
+					<div class="col-lg-4 col-md-6 portfolio-item filter-gifts">
+						<div class="portfolio-wrap">
+							<img src="./images/gift11.jpeg" class="img-fluid" alt="" />
+							<div class="portfolio-info">
+								<h4 data-i18n="gift">Gift One</h4>
+								<p>$18</p>
+								<div class="portfolio-links">
+									<a href="images/gift11.jpeg" class="add-to-cart"
+									   data-image="images/gift11.jpeg" data-id="gift11" data-name="Gift Item" data-price="18.00">
+										<ion-icon name="bag-add-outline"></ion-icon>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!--------------------------->
+					<div class="col-lg-4 col-md-6 portfolio-item filter-exp">
+						<div class="portfolio-wrap">
+							<img src="./images/exp1.jpeg" class="img-fluid" alt="" />
+							<div class="portfolio-info">
+								<h4 data-i18n="exper">Experience One</h4>
+								<p>$18</p>
+								<div class="portfolio-links">
+									<a href="images/exp1.jpeg" class="add-to-cart"
+									   data-image="images/exp1.jpeg" data-id="exp1" data-name="Experience Item" data-price="18.00">
+										<ion-icon name="bag-add-outline"></ion-icon>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!--------------------------->
+					<div class="col-lg-4 col-md-6 portfolio-item filter-exp">
+						<div class="portfolio-wrap">
+							<img src="./images/exp2.jpeg" class="img-fluid" alt="" />
+							<div class="portfolio-info">
+								<h4 data-i18n="exper">Experience One</h4>
+								<p>$18</p>
+								<div class="portfolio-links">
+									<a href="images/exp2.jpeg" class="add-to-cart"
+									   data-image="images/exp2.jpeg" data-id="exp2" data-name="Experience Item" data-price="18.00">
+										<ion-icon name="bag-add-outline"></ion-icon>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!--------------------------->
+					<div class="col-lg-4 col-md-6 portfolio-item filter-exp">
+						<div class="portfolio-wrap">
+							<img src="./images/exp3.jpeg" class="img-fluid" alt="" />
+							<div class="portfolio-info">
+								<h4 data-i18n="exper">Experience One</h4>
+								<p>$18</p>
+								<div class="portfolio-links">
+									<a href="images/exp3.jpeg" class="add-to-cart"
+									   data-image="images/exp3.jpeg" data-id="exp3" data-name="Experience Item" data-price="18.00">
+										<ion-icon name="bag-add-outline"></ion-icon>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!--------------------------->
+					<div class="col-lg-4 col-md-6 portfolio-item filter-exp">
+						<div class="portfolio-wrap">
+							<img src="./images/exp4.jpeg" class="img-fluid" alt="" />
+							<div class="portfolio-info">
+								<h4 data-i18n="exper">Experience One</h4>
+								<p>$18</p>
+								<div class="portfolio-links">
+									<a href="images/exp4.jpeg" class="add-to-cart"
+									   data-image="images/exp4.jpeg" data-id="exp4" data-name="Experience Item" data-price="18.00">
+										<ion-icon name="bag-add-outline"></ion-icon>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!--------------------------->
+					<div class="col-lg-4 col-md-6 portfolio-item filter-exp">
+						<div class="portfolio-wrap">
+							<img src="./images/exp5.jpeg" class="img-fluid" alt="" />
+							<div class="portfolio-info">
+								<h4 data-i18n="exper">Experience One</h4>
+								<p>$18</p>
+								<div class="portfolio-links">
+									<a href="images/exp5.jpeg" class="add-to-cart"
+									   data-image="images/exp5.jpeg" data-id="exp5" data-name="Experience Item" data-price="18.00">
+										<ion-icon name="bag-add-outline"></ion-icon>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+
+
+				</div>
+
+
+			</div>
+		</section>
+
+
+		<!---------CARDDDDDD------->
+		<!-- The cart modal -->
+
+		<div class="modal fade" id="bagModal" tabindex="-1" aria-labelledby="bagModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="bagModalLabel">Your Bag</h5>
+						<!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+					</div>
+					<div class="modal-body">
+						<div id="cart-items" style="color: antiquewhite !important;">
+							<!-- Cart items will be dynamically inserted here -->
+						</div>
+						<div class="mt-3 pt-3 border-top">
+							<div class="d-flex justify-content-between align-items-center">
+								<h5 style="color: antiquewhite !important;">Total:</h5>
+								<h5 id="cart-total" style="color: antiquewhite !important;">$0.00</h5>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Continue Shopping</button>
+						<!--<button type="button" class="btn btn-primary" data-bs-dismiss="modal">Checkout</button>-->
+						<button type="button" class="btn btn-primary" id="openCheckoutModal" style="background-color: darkblue !important; border-color: darkblue;">Checkout</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		
+		<!-- New checkout modal -->
+<div class="modal fade" id="checkoutModal" tabindex="-1" aria-labelledby="checkoutModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="checkoutModalLabel">Checkout</h5>
+                <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+            </div>
+            <div class="modal-body">
+                <!-- Removed the items display section -->
+                
+                <div class="mt-4">
+                    <h5 style="color: antiquewhite !important;">Payment Method</h5>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="paymentMethod" id="creditCard" checked>
+                        <label class="form-check-label" for="creditCard" style="color: antiquewhite !important;">
+                            Credit Card
+                        </label>
+                    </div>
+                    
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="paymentMethod" id="cashOnDelivery">
+                        <label class="form-check-label" for="cashOnDelivery" style="color: antiquewhite !important;">
+                            Cash on Delivery
+                        </label>
+                    </div>
+                </div>
+                
+                <!-- Credit Card Form (shown when credit card is selected) -->
+                <div id="creditCardForm" class="mt-3">
+                    <div class="mb-3">
+                        <label for="cardNumber" class="form-label" style="color: antiquewhite !important;">Card Number</label>
+                        <input type="text" class="form-control" id="cardNumber" placeholder="1234 5678 9012 3456">
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="expiryDate" class="form-label" style="color: antiquewhite !important;">Expiry Date</label>
+                            <input type="text" class="form-control" id="expiryDate" placeholder="MM/YY">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="cvv" class="form-label" style="color: antiquewhite !important;">CVV</label>
+                            <input type="text" class="form-control" id="cvv" placeholder="123">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="cardName" class="form-label" style="color: antiquewhite !important;">Name on Card</label>
+                        <input type="text" class="form-control" id="cardName" placeholder="John Doe">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Back to Bag</button>
+                <button type="button" class="btn btn-success" id="confirmPayment">Confirm Payment</button>
+            </div>
+        </div>
+    </div>
+	</div>
+
+
+	</main>
+
+	<!-- ADD VIDEO WIDGET HERE -->
+	<div class="floating-video-container">
+		<div class="video-player">
+			<video id="floating-video" controls>
+				<source src="video/moh_video.mp4" type="video/mp4">
+				Your browser does not support HTML5 video.
+			</video>
+			<div class="video-controls">
+				<button class="enlarge-btn">⛶</button>
+				<button class="close-btn">×</button>
+			</div>
+		</div>
+	</div>
+	<!--Reviewwww-->
+<div class="floating-review-icon" style="position: fixed; bottom: 140px; right: 40px; z-index: 1050;">
+  <button id="openReviewModal" style="background: #fff; border-radius: 50%; border: none; box-shadow: 0 2px 8px rgba(0,0,0,0.2); width: 56px; height: 56px; display: flex; align-items: center; justify-content: center;">
+    <ion-icon name="chatbubbles-outline" style="font-size: 32px; color: #0094ff;"></ion-icon>
+  </button>
+</div>
+	<!--Review Modal-->
+	<!-- ...existing code... -->
+<div class="modal fade" id="reviewModal" tabindex="-1" aria-labelledby="reviewModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content" style="background: #222; color: #fff;">
+      <div class="modal-header">
+        <h5 class="modal-title" id="reviewModalLabel">Reviews</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Reviews List -->
+        <div id="reviews-list" style="max-height: 200px; overflow-y: auto; margin-bottom: 1rem;">
+          <!-- Reviews will be inserted here -->
+        </div>
+        <hr style="border-color: #444;">
+        <!-- Add Review Form -->
+        <form id="addReviewForm">
+          <div class="mb-2">
+            <input type="text" class="form-control" id="reviewerName" placeholder="Your Name" required>
+          </div>
+          <div class="mb-2">
+            <textarea class="form-control" id="reviewText" rows="2" placeholder="Your Review" required></textarea>
+          </div>
+          <div class="mb-2">
+            <select class="form-select" id="reviewRating" required>
+              <option value="">Rating</option>
+              <option value="5">★★★★★</option>
+              <option value="4">★★★★☆</option>
+              <option value="3">★★★☆☆</option>
+              <option value="2">★★☆☆☆</option>
+              <option value="1">★☆☆☆☆</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary w-100" style="background-color: darkblue; border: none;">Submit Review</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+	<!--Main Section End-->
+	<!--Modal-->
+	<div class="modal fade" id="itemModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-fullscreen">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h1 class="modal-title fs-5" id="exampleModalLabel" data-i18n="book_place" >
+						Book your seat 
+					</h1>
+
+				</div>
+				<div class="modal-body">
+					<!--The Contact and Booking form and social-->
+					<div class="container content">
+						<div class="row">
+							<div class="col-lg-6">
+								<div class="info-box mb-4">
+									<ion-icon name="navigate-circle-outline" style="color: #0094ff; font-size: 20px;"></ion-icon>
+									<h3 style="color: #0094ff; font-size: 18px;" data-i18n="location">Location</h3>
+									<p style="color: #0094ff; font-size: 15px;" >Al quseir Street, Marsa Alam, Road 65 (Next to Marina Marsa Alam) </p>
+								</div>
+							</div>
+							<div class="col-lg-3 col-md-6">
+								<div class="info-box mb-4">
+									<ion-icon name="mail-outline" style="color: #0094ff; font-size: 20px;"></ion-icon>
+									<h3 style="color: #0094ff; font-size: 18px;" data-i18n="email_us">Email Us </h3>
+									<p style="color: #0094ff;">contact@example.com</p>
+								</div>
+							</div>
+							<div class="col-lg-3 col-md-6">
+								<div class="info-box mb-4">
+									<ion-icon name="call-outline" style="color: #0094ff; font-size: 20px;"></ion-icon>
+									<h3 style="color: #0094ff; font-size: 18px; " data-i18n="call_us">Call Us</h3>
+									<p style="color: #0094ff;">+20 1276595483</p>
+								</div>
+							</div>
+						</div>
+						<!---------------------------------------->
+						<div class="row">
+							<div class="col-lg-6">
+								<iframe class="mb-4 mb-lg-0"
+										src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3623.717259521091!2d34.8870521!3d25.0802809!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDA0JzQ5LjAiTiAzNMKwNTMnMjIuNyJF!5e0!3m2!1sen!2sus!4v1620000000000"
+										style="border:0; width:100%; height:384px"
+										allowfullscreen=""
+										frameborder="0"></iframe>
+							</div>
+							<div class="col-lg-6">
+								<form class="contact-form">
+									<div class="row">
+										<div class="col-md-6 form-group">
+											<input type="text"
+												   name="name"
+												   class="form-control"
+												   id="name"
+												   placeholder="Your Name"
+												   data-i18n-placeholder="your_name"
+												   required />
+										</div>
+										<div class="col-md-6 form-group mt-3 mt-md-0">
+											<input type="email"
+												   class="form-control"
+												   name="email"
+												   id="email"
+												   placeholder="Your Email"
+												   data-i18n-placeholder="your_email"
+												   required />
+										</div>
+									</div>
+									<div class="form-group mt-3">
+										<input type="text"
+											   class="form-control"
+											   name="telephone"
+											   id="telephone"  
+											   placeholder="Telephone"
+											   data-i18n-placeholder="telephone"
+											   required />
+									</div>
+
+									<div class="form-group mt-3">
+										<textarea class="form-control"
+												  name="address"
+												  rows="1"
+												  placeholder="Address"
+												  data-i18n="address" 
+												  required></textarea>
+									</div>
+									<div class="form-group mt-3">
+										<textarea class="form-control"
+												  name="message"
+												  rows="9"
+												  placeholder="message"
+												  data-i18n="message"></textarea>
+									</div>
+									<div class="text-center">
+										<button class="gold-btn" type="submit" data-i18n="book_now">BOOK NOW</button>
+									</div>
+								</form>
+							</div>
+						</div>
+						<!------------------------------------>
+						<div class="row">
+							<ul class="sci">
+								<li>
+									<a href="https://www.facebook.com/profile.php?id=61574955060614&mibextid=wwXIfr&rdid=RVEkeHJBV35tOQJ8&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F192DzrcWaf%2F%3Fmibextid%3DwwXIfr#">
+										<ion-icon name="logo-facebook" style="font-size: 25px;"></ion-icon>
+									</a>
+								</li>
+								<li>
+									<a href="https://www.instagram.com/metseli_sunken_museum?igsh=MXRpeDV0aTBpbGxjMQ==">
+										<ion-icon name="logo-instagram" style="font-size: 25px;"></ion-icon>
+									</a>
+								</li>
+								<li>
+									<a href="https://youtube.com/@metselisunkenmuseum?si=W5xtfjKNI7J0qguF">
+										<ion-icon name="logo-youtube" style="font-size: 25px;"></ion-icon>
+									</a>
+								</li>
+								
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="modal-close-btn" data-bs-dismiss="modal" data-i18n="close">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--Languages-->
+	<div class="language-switcher">
+		<button class="language-current">
+			<ion-icon name="globe-outline" style="font-size: 15px; color :#ffffff;"></ion-icon>
+			<span id="current-lang" style="font-size: 15px; color :#ffffff;">EN</span>
+		</button>
+		<ul class="language-options">
+			<li data-lang="en">English</li>
+			<li data-lang="ar">العربية</li> <!-- Arabic added -->
+		</ul>
+	</div>
+
+
+	<!-- Chatbot Floating Button and Modal -->
+<div id="chatbot-container">
+  <button id="openChatbot" style="position: fixed; bottom: 70px; right: 40px; z-index: 1050; background: #0094ff; border: none; border-radius: 50%; width: 56px; height: 56px; box-shadow: 0 2px 8px rgba(0,0,0,0.2); display: flex; align-items: center; justify-content: center;">
+    <ion-icon name="chatbox-ellipses-outline" style="font-size: 32px; color: #fff;"></ion-icon>
+  </button>
+  <div id="chatbotModal" style="display:none; position: fixed; bottom: 140px; right: 40px; width: 350px; max-width: 90vw; background: #fff; border-radius: 12px; box-shadow: 0 2px 16px rgba(0,0,0,0.25); z-index: 2000; overflow: hidden;">
+    <div style="background: darkblue; color: #fff; padding: 12px 16px; display: flex; justify-content: space-between; align-items: center;">
+      <span>Metseli Museum Chatbot</span>
+      <button id="closeChatbot" style="background: none; border: none; color: #fff; font-size: 20px;">×</button>
+    </div>
+    <div id="chatbot-messages" style="height: 260px; overflow-y: auto; padding: 12px; background: #f7f7f7; font-size: 15px;"></div>
+    <form id="chatbot-form" style="display: flex; border-top: 1px solid #eee;">
+      <input type="text" id="chatbot-input" placeholder="Ask me about the museum..." autocomplete="off" style="flex: 1; border: none; padding: 10px; font-size: 15px;">
+      <button type="submit" style="background: darkblue; color: #fff; border: none; padding: 0 18px;">Send</button>
+    </form>
+  </div>
+</div>
+
+	<!--JavaScript Vendors-->
+	<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	<!--Video-->
+	<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+	<!--Languages-->
+	<script src="./js/lang.js"></script>
+	<!-- Customised javascript -->
+	<script src="./js/carousel.js"></script>
+	<script src="./js/swiper.js"></script>
+	<script src="./js/isotope.js"></script>
+	<script src="./js/modal.js"></script>
+	<script src="./js/video.js"></script>
+	<script src="./js/main.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/checkout.js"></script>
+	<script src="js/eventtype.js"></script>
+	<script src="js/package.js"></script>
+	<script src="js/chatbot.js"></script>
+
+</body>
+</html>
