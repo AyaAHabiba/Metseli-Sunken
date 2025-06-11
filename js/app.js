@@ -495,28 +495,81 @@ if (typeof bootstrap !== 'undefined') {
 // --- Place this at the end of app.js ---
 
 function handleCheckoutSuccess() {
-    // Remove booking info from localStorage
+    // 1. Clear stored data
     localStorage.removeItem('bookingInfo');
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    
+    // Keep event booking if present (with price 0)
+    const updatedCart = cart.filter(item => item.name === 'Event Booking' && parseFloat(item.price) === 0);
+    localStorage.setItem('cart', JSON.stringify(updatedCart));
+
+    // 2. Update UI
     updateCartDisplay();
-    showToast("Thank you for your payment! Booking info cleared.");
+    showToast("Thank you for your payment! Your booking is confirmed.", "success");
 
-    // Clear the booking form fields
+    // 3. Reset form
     const bookingForm = document.querySelector('#itemModal .contact-form');
-    if (bookingForm) {
-        bookingForm.reset();
-    }
+    if (bookingForm) bookingForm.reset();
 
-    // Optionally, clear the cart as well:
-    // localStorage.setItem('cart', JSON.stringify([]));
-    // updateCartDisplay();
+    // 4. Close modals
+    const checkoutModal = bootstrap.Modal.getInstance(document.getElementById('checkoutModal'));
+    if (checkoutModal) checkoutModal.hide();
 
-    // Close the checkout modal
-    const checkoutModalEl = document.getElementById('checkoutModal');
-    if (checkoutModalEl) {
-        const checkoutModal = bootstrap.Modal.getInstance(checkoutModalEl);
-        if (checkoutModal) checkoutModal.hide();
-    }
+    const bagModal = bootstrap.Modal.getInstance(document.getElementById('bagModal'));
+    if (bagModal) bagModal.hide();
+
+    // 5. Redirect handling (GitHub Pages compatible)
+    setTimeout(() => {
+        const basePath = window.location.host.includes('github.io') 
+            ? `/${window.location.pathname.split('/')[1]}/` 
+            : '/';
+        
+        // Option 1: Redirect to home with success hash
+        window.location.href = `${basePath}#payment-success`;
+        
+        // Option 2: Or use this if you have a dedicated success page:
+        // window.location.href = `${basePath}success.html`;
+    }, 1500); // Short delay for UX
 }
+
+// Helper function to initialize checkout button (prevent duplicates)
+function initCheckoutButton() {
+    const openCheckoutBtn = document.getElementById('openCheckoutModal');
+    if (!openCheckoutBtn) return;
+
+    // Remove existing listeners to prevent duplicates
+    openCheckoutBtn.replaceWith(openCheckoutBtn.cloneNode(true));
+    const newBtn = document.getElementById('openCheckoutModal');
+
+    newBtn.addEventListener('click', function(e) {
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const filtered = cart.filter(item => !(item.name === 'Event Booking' && parseFloat(item.price) === 0));
+        
+        if (filtered.length === 0) {
+            e.preventDefault();
+            showToast("Your bag is empty. Please add items before checkout.", "danger");
+            
+            const bagModalEl = document.getElementById('bagModal');
+            if (bagModalEl) {
+                bootstrap.Modal.getOrCreateInstance(bagModalEl).show();
+            }
+            return;
+        }
+        
+        const checkoutModal = new bootstrap.Modal(document.getElementById('checkoutModal'));
+        checkoutModal.show();
+    });
+}
+
+// Initialize when DOM loads
+document.addEventListener('DOMContentLoaded', function() {
+    initCheckoutButton();
+    
+    // If returning from payment with success hash
+    if (window.location.hash === '#payment-success') {
+        showToast("Payment successful! Thank you for your booking.", "success");
+    }
+});
 
 document.getElementById('payCashBtn')?.addEventListener('click', function() {
     // ...your payment logic here...
